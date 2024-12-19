@@ -187,16 +187,16 @@ const KeyActivities = () => {
                       <ul className="list-disc list-inside mt-2 text-gray-700 px-3">
                         <li>
                           Jane is a key decision maker and was browsing
-                          "espresso machines" on First Coffee’s website.
+                          espresso machines on First Coffee website.
                         </li>
                         <li>
-                          Multiple people at her company reported{" "}
-                          <span className="font-medium">‘slowness’</span> during
+                          Multiple people at her company reported
+                          <span className="font-medium">slowness</span> during
                           service requests.
                         </li>
                         <li>
-                          Northwind Traders currently see{" "}
-                          <span className="font-medium">$200M in revenue</span>{" "}
+                          Northwind Traders currently see
+                          <span className="font-medium">$200M in revenue</span>
                           from their in-store coffee shops.
                         </li>
                       </ul>
@@ -244,11 +244,11 @@ const KeyActivities = () => {
                       Jane Reyes, the Chief Operating Officer of Northwind
                       Traders, is a dynamic leader with a proven track record in
                       optimizing operations and enhancing customer experiences.
-                      Under her guidance, Northwind Traders’ in-store coffee
+                      Under her guidance, Northwind Traders in-store coffee
                       shops have flourished, becoming a hallmark of quality and
-                      innovation. Jane’s commitment to excellence makes her an
+                      innovation. Jane commitment to excellence makes her an
                       ideal partner for First Coffee. She is always seeking
-                      top-tier equipment to elevate her coffee shops' offerings,
+                      top-tier equipment to elevate her coffee shops offerings,
                       ensuring consistent, high-quality service.
                     </p>
                   </div>
