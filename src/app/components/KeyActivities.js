@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiCoffee, FiBriefcase, FiEdit, FiSend } from "react-icons/fi";
+import Image from "next/image";
 
 const KeyActivities = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -108,16 +109,18 @@ const KeyActivities = () => {
 
                 <p
                   className="cursor-pointer text-xl font-semibold"
-                  onClick={() => setIsModalOpen(false)} 
+                  onClick={() => setIsModalOpen(false)}
                 >
                   X
                 </p>
               </div>
 
               <div className="flex items-center space-x-2 bg-white rounded-lg shadow-md px-3 py-3 mt-2">
-                <img
-                  src="https://via.placeholder.com/40"
+                <Image
+                  src=""
                   alt="Jane Reyes"
+                  width={40}
+                  height={40}
                   className="rounded-full w-10 h-10"
                 />
                 <div>
@@ -278,102 +281,3 @@ const KeyActivities = () => {
 };
 
 export default KeyActivities;
-
-// import React from "react";
-// import { FiCoffee, FiBriefcase } from "react-icons/fi";
-
-// const KeyActivities = () => {
-//   return (
-//     <div className="flex flex-col sm:flex-row mt-6">
-//     {/* Left Section: Cards (Full Width on Small Screens) */}
-//     <div className="w-full sm:w-2/3 pr-4">
-//       <p className="text-gray-600 mb-4">
-//         Copilot has pinpointed 20 key leads that show strong purchase intent
-//         and are actively engaging. These leads need your focus.
-//       </p>
-
-//       {/* Cards */}
-//       <div className="flex flex-col sm:flex-row space-y-4 sm:space-x-4">
-//         <div className="bg-gray-100 p-4 rounded-md shadow w-full">
-//           <h4 className="font-semibold">Jane Reyes</h4>
-//           <p className="text-gray-600 text-sm">
-//             Jane may be interested in upgrading espresso machines for her
-//             in-store coffee shops.
-//           </p>
-//           <p className="text-xs text-gray-500 mt-2">
-//             Expand business • High buying intent
-//           </p>
-//         </div>
-//         <div className="bg-gray-100 p-4 rounded-md shadow w-full">
-//           <h4 className="font-semibold">Allan Munger</h4>
-//           <p className="text-gray-600 text-sm">
-//             Prepare for high-buying intent meeting scheduled for 2 PM
-//             regarding upgrading service contract.
-//           </p>
-//           <p className="text-xs text-gray-500 mt-2">
-//             Upcoming meeting • Due today
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-
-//     {/* Right Section: Other Key Activities (Full Width on Small Screens) */}
-//     <div className="w-full sm:w-1/3 pl-4">
-//       <h3 className="text-md font-semibold mb-2">Other key activities</h3>
-//       <div className="space-y-4">
-//         <div className="flex items-center">
-//           <FiCoffee className="text-green-500 mr-2" size={20} />
-//           <div>
-//             <h4 className="font-semibold">Cafe A100 for Woodland Bank</h4>
-//             <p className="text-sm text-gray-600">
-//               Review draft and reply to Chris Naido
-//             </p>
-//             <p className="text-xs text-gray-500 mt-1">
-//               $280,000 • 8 days to close
-//             </p>
-//           </div>
-//         </div>
-//         <div className="flex items-center">
-//           <FiBriefcase className="text-purple-500 mr-2" size={20} />
-//           <div>
-//             <h4 className="font-semibold">
-//               Partnership opportunity for Fabrikam
-//             </h4>
-//             <p className="text-sm text-gray-600">
-//               Prepare for Fabrikam’s key stakeholder meeting.
-//             </p>
-//             <p className="text-xs text-gray-500 mt-1">
-//               $5,000,000 • 12 days to close
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-//       <a href="#" className="text-blue-600 text-sm mt-4 inline-block">
-//         Show all key activities
-//       </a>
-//     </div>
-//   </div>
-//   );
-// };
-
-// export default KeyActivities;
-
-// const KeyActivities = () => {
-//     return (
-//       <div className="bg-white p-4 shadow-md rounded-lg">
-//         <h3 className="font-semibold mb-2">Other key activities</h3>
-//         <div className="space-y-2">
-//           <div className="p-3 bg-gray-50 border rounded-md hover:bg-gray-100 cursor-pointer">
-//             <p className="font-medium">Cafe A100 for Woodland Bank</p>
-//             <p className="text-gray-500 text-sm">Review draft and reply to Chris Nadio</p>
-//           </div>
-//           <div className="p-3 bg-gray-50 border rounded-md hover:bg-gray-100 cursor-pointer">
-//             <p className="font-medium">Partnership opportunity for Fabrikam</p>
-//             <p className="text-gray-500 text-sm">Prepare for Fabrikam’s key stakeholder meeting</p>
-//           </div>
-//         </div>
-//       </div>
-//     );
-//   };
-
-//   export default KeyActivities;
