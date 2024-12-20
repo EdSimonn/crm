@@ -36,7 +36,7 @@ const Table = () => {
               <td className="p-3">
                 <input type="checkbox" className="cursor-pointer" />
               </td>
-              <td className="p-3">{lead.name}</td>
+              <td className="p-3 text-blue-600">{lead.name}</td>
               <td className="p-3">{lead.topic}</td>
               <td className="p-3">{lead.status}</td>
               <td className="p-3">{lead.createdOn}</td>

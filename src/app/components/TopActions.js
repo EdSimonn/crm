@@ -1,17 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import {
-  FiBarChart2,
-  FiEye,
-  FiPlus,
-  FiRefreshCw,
-  FiUsers,
-  FiEdit3,
-  FiFilter,
-  FiSettings,
-  FiTrash,
-} from "react-icons/fi";
+import React from "react";
+import { actionItems } from "../data";
 
 const TopActions = () => {
   return (
@@ -25,47 +15,21 @@ const TopActions = () => {
 
       {/* Right Section */}
       <div className="flex space-x-4 text-gray-600">
-        <button className="flex items-center hover:text-blue-600">
-          <FiBarChart2 className="mr-1" size={14} />
-          <span className="hidden sm:inline">Show chart</span>
-        </button>
-        <button className="flex items-center hover:text-blue-600">
-          <FiEye className="mr-1" size={14} />
-          <span className="hidden sm:inline">Focused view</span>
-        </button>
-        <button className="flex items-center hover:text-blue-600">
-          <FiPlus className="mr-1" size={14} />
-          <span className="hidden sm:inline">New</span>
-        </button>
-        <button className="flex items-center hover:text-blue-600">
-          <FiRefreshCw className="mr-1" size={14} />
-          <span className="hidden sm:inline">Refresh</span>
-        </button>
-        <button className="flex items-center hover:text-blue-600">
-          <FiUsers className="mr-1" size={14} />
-          <span className="hidden sm:inline">Collaborate</span>
-        </button>
-        <button className="flex items-center hover:text-blue-600">
-          <FiTrash className="mr-1" size={14} />
-          <span className="hidden sm:inline">Delete</span>
-        </button>
-        <p>+</p>
-        <p>:</p>
-        <button className="flex items-center hover:text-blue-600 border p-2">
-          <FiFilter className="mr-1" size={14} />
-          <span className="hidden sm:inline">Smart data</span>
-        </button>
-        <button className="flex items-center hover:text-blue-600 border p-2">
-          <FiEdit3 className="mr-1" size={14} />
-          <span className="hidden sm:inline">Edit filters</span>
-        </button>
-        <button className="flex items-center hover:text-blue-600 border p-2">
-          <FiSettings className="mr-1" size={14} />
-          <span className="hidden sm:inline">Edit columns</span>
-        </button>
-        <button className="flex items-center text-white p-2 bg-blue-700 rounded-md">
-          <FiEdit3 className="mr-1" size={14} />
-        </button>
+        {actionItems.map((action, index) => {
+          const Icon = action.icon; // Dynamically assign icon
+          return (
+            <button
+              key={index}
+              className={`flex items-center hover:text-blue-600 ${
+                action.className || ""
+              }`}
+              onClick={action.onClick}
+            >
+              <Icon className="mr-1 text-blue-600" size={14} />
+              <span className="hidden sm:inline">{action.label}</span>
+            </button>
+          );
+        })}
       </div>
     </div>
   );

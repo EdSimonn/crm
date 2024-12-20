@@ -1,13 +1,14 @@
 import React from "react";
+import { FiX } from "react-icons/fi";
 
 const AgentSkillModal = ({ onClose }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
-      {/* <div className="bg-white rounded-lg p-6 py-16 w-full max-w-md"> */}
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl w-full">
-        <p className="flex items-cenetr justify-end pb-8" onClick={onClose}>
-          X
+      <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl w-full text-sm">
+        <p className="flex items-cenetr justify-end pb-8" >
+          <FiX size={20} onClick={onClose} className='cursor-pointer' />
         </p>
+
         <h2 className="text-xl font-semibold mb-4">Agent skill</h2>
 
         {/* Skills Content */}
