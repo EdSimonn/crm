@@ -55,55 +55,65 @@ export const actionItems = [
     label: "Show chart",
     icon: FiBarChart2,
     onClick: () => console.log("Show chart clicked"),
+    color:'text-blue-600'
   },
   {
     label: "Focused view",
     icon: FiEye,
     onClick: () => console.log("Focused view clicked"),
+    color:'text-blue-600'
   },
   {
     label: "New",
     icon: FiPlus,
     onClick: () => console.log("New clicked"),
+    color:'text-blue-600'
   },
   {
     label: "Refresh",
     icon: FiRefreshCw,
     onClick: () => console.log("Refresh clicked"),
+    color:'text-blue-600'
   },
   {
     label: "Collaborate",
     icon: FiUsers,
     onClick: () => console.log("Collaborate clicked"),
+    color:'text-blue-600'
   },
   {
     label: "Delete",
     icon: FiTrash,
     onClick: () => console.log("Delete clicked"),
+    color:'text-blue-600'
   },
   {
     label: "Smart data",
     icon: FiFilter,
     className: "border p-2",
     onClick: () => console.log("Smart data clicked"),
+    color:'text-blue-600'
   },
   {
     label: "Edit filters",
     icon: FiEdit3,
     className: "border p-2",
     onClick: () => console.log("Edit filters clicked"),
+    color:'text-blue-600'
   },
   {
     label: "Edit columns",
     icon: FiSettings,
     className: "border p-2",
     onClick: () => console.log("Edit columns clicked"),
+    color:'text-blue-600'
   },
   {
     label: "",
     icon: FiEdit3,
     className: "text-white p-2 bg-blue-700 rounded-md",
     onClick: () => console.log("Primary action clicked"),
+    color:'text-white'
   },
 ];
 

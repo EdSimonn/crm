@@ -6,15 +6,20 @@ import { FiMenu } from "react-icons/fi";
 
 const Sidebar = ({ onToggle, onAgentSkillClick }) => {
   const [collapsed, setCollapsed] = useState(false);
+  const [activeItem, setActiveItem] = useState(null); // State to track active menu item
 
   const toggleSidebar = () => {
     setCollapsed(!collapsed);
     onToggle && onToggle(!collapsed);
   };
 
+  const handleMenuItemClick = (index) => {
+    setActiveItem(index); // Set the clicked menu item as active
+  };
+
   return (
     <div
-      className={`h-screen bg-gray-100 shadow-lg fixed transition-all duration-300 ${
+      className={`h-screen bg-gray-50 fixed transition-all duration-300 ${
         collapsed ? "w-12" : "w-64"
       }`}
     >
@@ -59,10 +64,15 @@ const Sidebar = ({ onToggle, onAgentSkillClick }) => {
           return (
             <li
               key={index}
-              className="flex items-center p-2 hover:bg-white cursor-pointer group relative"
-              onClick={
-                item.onClick === "onAgentSkillClick" ? onAgentSkillClick : null
-              }
+              className={`flex items-center p-2 hover:bg-white hover:border-l-2 hover:border-blue-500 cursor-pointer group relative ${
+                activeItem === index ? "bg-white border-l-2 border-blue-500" : ""
+              }`}
+              onClick={() => {
+                handleMenuItemClick(index);
+                if (item.onClick === "onAgentSkillClick") {
+                  onAgentSkillClick();
+                }
+              }}
             >
               <Icon size={18} />
               {!collapsed && <span className="ml-2">{item.label}</span>}

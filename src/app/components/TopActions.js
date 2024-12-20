@@ -5,7 +5,7 @@ import { actionItems } from "../data";
 
 const TopActions = () => {
   return (
-    <div className="flex justify-between items-center p-4 border-b bg-white shadow-sm relative">
+    <div className="flex justify-between items-center p-4 border  bg-white shadow-xl mb-8 relative">
       {/* Left Section */}
       <div className="flex items-center space-x-4">
         <p className="text-lg font-semibold hover:text-blue-600 hidden sm:block">
@@ -25,7 +25,7 @@ const TopActions = () => {
               }`}
               onClick={action.onClick}
             >
-              <Icon className="mr-1 text-blue-600" size={14} />
+              <Icon className={`${action.color} mr-1`} size={14} />
               <span className="hidden sm:inline">{action.label}</span>
             </button>
           );
